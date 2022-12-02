@@ -1,15 +1,29 @@
 public class DirectorTecnico extends Persona {
-    
-    public String plantearEsquema(int nroEsquema) {
-        String esquema = "";
 
-        if(nroEsquema == 1) {
-            esquema = "Estas planteando un esquema táctico de 4-4-2";
-        }
-        if(nroEsquema == 2) {
-            esquema = "Estas planteando un esquema táctico de 5-4-1";
-        }
-        return esquema;
+    
+    public DirectorTecnico(String n, String a, double s) {
+        setNombre(n);
+        setApellido(a);
+        setSueldo(s);
     }
 
+    public String plantearEsquema(int n) {
+        String mensaje = "";
+        if(n == 1) {
+            mensaje = "Se planteó una táctica de 4-4-2";
+        }
+        if(n == 2) {
+            mensaje = "Se planteó una táctica de 5-4-1";
+        }
+        if(n == 3) {
+            mensaje = "Se planteó una táctica de 3-4-3";
+        }
+        return mensaje;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+    
 }

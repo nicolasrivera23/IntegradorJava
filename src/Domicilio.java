@@ -1,31 +1,42 @@
 public class Domicilio {
 
     private String calle = "";
-    private String nro = "";
+    private String numero = "";
     private String localidad = "";
 
+    public Domicilio(String c, String n, String l) {
+        setCalle(c);
+        setNumero(n);
+        setLocalidad(l);
+    }
 
     public String getCalle() {
         return calle;
     }
+
     public void setCalle(String calle) {
         this.calle = calle;
     }
-    public String getNro() {
-        return nro;
+
+    public String getNumero() {
+        return numero;
     }
-    public void setNro(String nro) {
-        this.nro = nro;
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
+
     public String getLocalidad() {
         return localidad;
     }
+
     public void setLocalidad(String localidad) {
         this.localidad = localidad;
     }
 
     public String toString() {
-        return "Domicilio: " + getCalle() + " " + getNro() + "\n" +
+        return "Calle: " + getCalle() + "\n" +
+        "Nro: " + getNumero() + "\n" +
         "Localidad: " + getLocalidad();
     }
     

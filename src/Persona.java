@@ -1,11 +1,13 @@
 public class Persona {
 
-    private String nombre;
-    private String apellido;
-    private double sueldo;
+    private String nombre = "";
+    private String apellido = "";
+    private int edad = 0;
+    private double sueldo = 0.0;
     private Domicilio domicilio;
 
-    public Persona() {}
+    //Constructor 
+    public Persona(){}
 
     public Persona(String n, String a, double s) {
         this.nombre = n;
@@ -13,30 +15,46 @@ public class Persona {
         this.sueldo = s;
     }
 
-    //Método setter para nombre
-    public void setNombre(String n) {
+    public Persona(String n, String a) {
         this.nombre = n;
+        this.apellido = a;
     }
 
-    //Método getter para nombre
+    //setter nombre
+    public void setNombre(String n) {
+        this.nombre = n;
+    } 
+
+    //getter nombre
     public String getNombre() {
         return this.nombre;
     }
 
-    //Método setter para apellido
-    public void setApellido(String a) {
-        this.apellido = a;
-    }
-
-    //Método getter para apellido
     public String getApellido() {
-        return this.apellido;
+        return apellido;
     }
 
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    //setter sueldo
     public void setSueldo(double s) {
+        if(s < 100000) {
+            s = 120000;
+        }
         this.sueldo = s;
     }
 
+    //getter sueldo
     public double getSueldo() {
         return this.sueldo;
     }
@@ -50,7 +68,9 @@ public class Persona {
     }
 
     public String toString() {
-        return "Nombre Completo: " + getNombre() + " " + getApellido() + "\n" +
-               "Sueldo: " + getSueldo();
+        return "Nombre Completo: " + this.nombre + " " + this.apellido + "\n" +
+        "Sueldo: " + this.getSueldo() + "\n" +
+        "Domicilio: " + getDomicilio();
     }
+    
 }
