@@ -1,8 +1,6 @@
-public class Arbitro {
+public class Arbitro extends Persona {
 
     private int edad;
-    private String nombre;
-    
 
     //setter
     public void setEdad(int e){
@@ -13,17 +11,9 @@ public class Arbitro {
         return this.edad;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     @Override
     public String toString() {
-        return "Arbitro [edad=" + edad + ", nombre=" + nombre + "]";
+        return "Arbitro [edad=" + edad + ", nombre=" + this.getNombre() + "]";
     }
 
 }

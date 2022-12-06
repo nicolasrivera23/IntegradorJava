@@ -21,7 +21,7 @@ public class Jugador extends Persona {
 
     @Override
     public String toString() {
-        return super.toString() + "\n" + 
+        return super.toString() + "\n" +
         "Valor en el mercado: " + getCotizacion();
     }
     
